@@ -1,0 +1,45 @@
+@theme {
+  /* Backgrounds */
+  --color-background: #020617;
+  --color-background-alt: #022c22;
+  --color-background-warm: #2b2113;
+  --color-surface: #111827;
+  --color-surface-raised: #1f2937;
+
+  /* Primary - beige family (rebrand).
+     Anteriores (verdes, comentados para no perderlos):
+     --color-primary: #22c55e;
+     --color-primary-soft: #4ade80;
+     --color-primary-strong: #16a34a;
+     --color-primary-hover: #15803d;
+     NOTA: el beige es claro, así que sobre fondos beige
+     hay que usar texto oscuro (#020617), no blanco. */
+  --color-primary: #f6e3ba;
+  --color-primary-soft: #fbefd6;
+  --color-primary-strong: #e7cd9c;
+  --color-primary-hover: #dec08d;
+
+  /* Accent - blue family */
+  --color-accent: #3b82f6;
+  --color-accent-soft: #60a5fa;
+  --color-accent-strong: #2563eb;
+
+  /* Text */
+  --color-foreground: #ffffff;
+  --color-muted: #9ca3af;
+  --color-muted-strong: #d1d5db;
+
+  /* Texto oscuro para usar sobre fondos beige (contraste) */
+  --color-on-primary: #020617;
+
+  /* Borders */
+  --color-border: #374151;
+  --color-border-subtle: #1f2937;
+
+  /* Brand icon colors - edit manually here */
+  --color-brand-typescript: #3178c6;
+  --color-brand-react: #61dafb;
+  --color-brand-next: #ffffff;
+  --color-brand-tailwind: #06b6d4;
+  --color-brand-node: #339933;
+}
