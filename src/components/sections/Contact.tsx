@@ -54,9 +54,9 @@ export default function Contact() {
                   <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
                   <div className="absolute inset-0 w-3 h-3 bg-primary rounded-full animate-ping" />
                 </div>
-                <h3 className="text-foreground font-bold text-xl">Available for Work (prueba)</h3>
+               <h3 className="text-foreground font-bold text-xl">Available for Work</h3>
               </div>
-              <p className="text-muted-strong text-sm">Texto de prueba para la tarjeta de disponibilidad.</p>
+              <p className="text-muted-strong text-sm">I'm currently available for freelance projects opportunities.</p>
             </div>
 
             <div className="space-y-4">
