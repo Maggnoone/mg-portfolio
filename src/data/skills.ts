@@ -37,7 +37,7 @@ export const skillCategories: SkillCategory[] = [
     gradientTo: 'to-pink-500',
     items: [
       { name: 'Spanish - Native', icon: FaLanguage, colorToken: '#A855F7' },
-      { name: 'English - B1', icon: FaLanguage, colorToken: '#A855F7' },
+      { name: 'English - B2', icon: FaLanguage, colorToken: '#A855F7' },
     ],
   },
 ]
