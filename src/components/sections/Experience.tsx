@@ -1,9 +1,20 @@
+import { useEffect, useState } from 'react'
 import { FaBriefcase, FaCalendar } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { experiences } from '../../data/experience'
 import SectionTitle from '../ui/SectionTitle'
 
 export default function Experience() {
+  const [isDesktop, setIsDesktop] = useState(() => window.matchMedia('(min-width: 768px)').matches)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)')
+    const updateIsDesktop = () => setIsDesktop(mediaQuery.matches)
+
+    mediaQuery.addEventListener('change', updateIsDesktop)
+    return () => mediaQuery.removeEventListener('change', updateIsDesktop)
+  }, [])
+
   return (
     <section id="experience" className="relative bg-transparent text-foreground py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
@@ -29,7 +40,7 @@ export default function Experience() {
               />
               <motion.div
                 className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                initial={{ opacity: 0, x: isDesktop ? (index % 2 === 0 ? -100 : 100) : 0 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}

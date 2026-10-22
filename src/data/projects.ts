@@ -78,6 +78,6 @@ export const projects: Project[] = [
     technologies: ['Next.js', 'React', 'Tailwind CSS', 'PostgreSQL', 'TypeScript'],
     htmlUrl: 'https://exologic.agency/projects',
     image: 'https://exologic.agency/assets/images/Moderation-Saas.webp',
-    createdAt: '2026-10-22',
+    createdAt: '2023-10-22',
   },
 ]

@@ -3,6 +3,7 @@ import type { Project } from '../../types/portfolio'
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
   const year = new Date(project.createdAt).getFullYear().toString()
+  const isPrivateBuild = project.name === 'SynapseCMS'
 
   return (
     <motion.div
@@ -48,14 +49,24 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         )}
 
         <div className="flex gap-3 pt-4 border-t border-border mt-auto">
-          <a
-            href={project.htmlUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 text-center px-4 py-2 bg-surface-raised hover:bg-border text-foreground rounded-lg text-sm font-medium transition-colors border border-border hover:border-primary/50 min-w-0"
-          >
-            GitHub
-          </a>
+          {isPrivateBuild ? (
+            <button
+              type="button"
+              disabled
+              className="flex-1 text-center px-4 py-2 bg-surface-raised text-muted rounded-lg text-sm font-medium border border-border min-w-0 cursor-not-allowed"
+            >
+              Private Build
+            </button>
+          ) : (
+            <a
+              href={project.htmlUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-4 py-2 bg-surface-raised hover:bg-border text-foreground rounded-lg text-sm font-medium transition-colors border border-border hover:border-primary/50 min-w-0"
+            >
+              GitHub
+            </a>
+          )}
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -63,7 +74,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
               rel="noopener noreferrer"
               className="flex-1 text-center px-4 py-2 bg-primary-strong hover:bg-primary-hover text-on-primary rounded-lg text-sm font-medium transition-colors min-w-0"
             >
-              Demo
+              Try it
             </a>
           )}
         </div>
